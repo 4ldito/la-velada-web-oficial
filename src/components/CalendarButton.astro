@@ -23,6 +23,7 @@ import Action from "./Action.astro"
 		options: ["Google", "Apple", "Microsoft365", "MicrosoftTeams"],
 		timeZone: "Europe/Madrid",
 		trigger: "click",
+		listStyle: "modal",
 		iCalFileName: "Reminder-Event",
 	}
 
@@ -57,3 +58,9 @@ import Action from "./Action.astro"
 		window.atcb_action(config, button)
 	})
 </script>
+
+<style is:global>
+	.atcb-list-item.atcb-list-item-close {
+		display: none;
+	}
+</style>
